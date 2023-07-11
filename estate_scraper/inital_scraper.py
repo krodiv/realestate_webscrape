@@ -19,3 +19,7 @@ class Scraper:
         #do something here for setting up a source
         self.driver.get(source)
         return self.driver
+
+    def find_element_by_class_name(self, element_name):
+        content = self.driver.find_element(By.CLASS_NAME, element_name)
+        return content
