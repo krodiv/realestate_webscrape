@@ -24,13 +24,13 @@ class Scraper:
         self.driver.get(source)
         return self.driver
 
-    # the below are not using selenium
-    # requests along with beautiful soup is used
     def find_element_by_class_name(self, element_name):
         #get website element with selenium
         content = self.driver.find_element(By.CLASS_NAME, element_name)
         return content
 
+    # the below are not using selenium
+    # requests along with beautiful soup is used
     def get_website_text(self, url):
         #get website content via requests
         return requests.get(url).text
